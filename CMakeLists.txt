@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(yolov8_msgs REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(rclcpp REQUIRED)
 
@@ -22,5 +23,11 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+ament_python_install_package(${PROJECT_NAME})
+install(PROGRAMS
+  stretch_seeing_eye_vision/object_detection.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
