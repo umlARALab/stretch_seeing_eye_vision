@@ -30,7 +30,11 @@ endif()
 ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   stretch_seeing_eye_vision/object_detection.py
+  stretch_seeing_eye_vision/base64_conversion.py
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME})
 
 ament_package()
