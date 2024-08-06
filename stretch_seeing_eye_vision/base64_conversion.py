@@ -7,7 +7,8 @@ from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
-import base64 
+import base64
+import requests 
     
 class SimplePubSub(Node):
     def __init__(self):
