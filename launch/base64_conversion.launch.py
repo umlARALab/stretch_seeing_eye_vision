@@ -7,7 +7,7 @@ def generate_launch_description():
             package='stretch_seeing_eye_vision',
             executable='base64_conversion.py',
             remappings=[
-                ('/image_raw', '/rotated/image_raw'),
+                ('/image_raw', '/rotated/image'),
                 ('/base_64', '/rotated/base_64'),
             ]
         )
